@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
-import Box from '@material-ui/core/Box';
+import Box from "@material-ui/core/Box";
+import useWindowDimensions from "./useWindowDimensions";
 import ProjectCard from "./ProjectCard";
 import bookSearch from "./images/bookSearch.png";
 import Fitness from "./images/fitness.png";
@@ -28,33 +29,33 @@ const stackArr = [
 ];
 
 const Portfolio = () => {
+  const { width } = useWindowDimensions();
+
+  const [gridTemplate, setGridTemplate] = useState("gridWide");
+
+  useEffect(() => {
+    if (width >= 1120) {
+      setGridTemplate("gridWide");
+    } else if (width < 1120 && width >= 770) {
+      setGridTemplate("gridNarrow");
+    }
+    else if (width < 770) {
+      setGridTemplate("gridMobile");
+    }
+  }, [width]);
   return (
-    <Box bgcolor='primary.main' style={{ paddingBottom: "4rem" }}>
+    <Box bgcolor="primary.main" style={{ paddingBottom: "4rem" }}>
       <div style={{ margin: "8rem 0 4rem 0", textAlign: "center" }}>
-        <Typography
-          variant="h2"
-          style={{marginBottom:'1rem'}}     
-        >
+        <Typography variant="h2" style={{ marginBottom: "1rem" }}>
           Portfolio
         </Typography>
-        <Typography
-          variant="body1"
-          style={{ textAlign: "center" }}
-        >
+        <Typography variant="body1" style={{ textAlign: "center" }}>
           For more detailed descriptions of the projects, please view the ReadMe
           file in a corresponding GitHub repository.
         </Typography>
       </div>
-     
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3,1fr)",
-          justifyItems: "center",
-         
-          rowGap: "4rem",
-        }}
-      >
+
+      <div className={gridTemplate}>
         <ProjectCard
           image={bookSearch}
           title="Book Search App"

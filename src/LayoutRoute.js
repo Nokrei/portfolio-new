@@ -2,7 +2,8 @@ import React from "react";
 import { Route } from "react-router-dom";
 import Box from '@material-ui/core/Box';
 import NavBar from "./NavBar";
-import ToTop from './ToTop'
+import ToTop from './ToTop';
+import useWindowDimensions from './useWindowDimensions'
 const LayoutRoute = (props) => {
   return (
     <Box bgcolor='primary.main' style={{height:'100%'}}>

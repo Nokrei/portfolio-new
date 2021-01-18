@@ -79,10 +79,10 @@ const Navbar = (props) => {
               </Typography>
               
             </div>
-            
+{/*             
             <Typography variant='body1' style={{flex:'1', textAlign:'right'}} >
             Dark mode ON / OFF         
-            </Typography>
+            </Typography> */}
             
             
             

@@ -34,3 +34,21 @@ html, body, #root, .App {
   background-size: 20px 2px, 0 2px, 100% 2px;
   background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
 }
+.gridWide{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-items: center;
+  row-gap: 4rem;
+}
+.gridNarrow{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+  row-gap: 4rem;
+}
+.gridMobile{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 4rem;
+}
