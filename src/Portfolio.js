@@ -38,8 +38,7 @@ const Portfolio = () => {
       setGridTemplate("gridWide");
     } else if (width < 1120 && width >= 770) {
       setGridTemplate("gridNarrow");
-    }
-    else if (width < 770) {
+    } else if (width < 770) {
       setGridTemplate("gridMobile");
     }
   }, [width]);

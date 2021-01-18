@@ -39,9 +39,9 @@ const NavBar = (props) => {
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar>
-          <Toolbar style={{display:'flex', }}>
-            <div style={{ display: "grid", justifyItems: "center",  }}>
-              <Typography variant="h5" >Piotr Mrozowski</Typography>
+          <Toolbar style={{ display: "flex" }}>
+            <div style={{ display: "grid", justifyItems: "center" }}>
+              <Typography variant="h5">Piotr Mrozowski</Typography>
               <Typography variant="h5">Web Developer</Typography>
             </div>
             <div>
@@ -51,7 +51,7 @@ const NavBar = (props) => {
                     display: "grid",
                     gridTemplateColumns: "1fr 1fr 1fr ",
                     justifyItems: "center",
-                    marginLeft:'7.3rem'
+                    marginLeft: "7.3rem",
                   }}
                 >
                   {props.links.map((entry, index) => (
@@ -73,19 +73,13 @@ const NavBar = (props) => {
                       </Link>
                     </li>
                   ))}
-                  
                 </ul>
-                
               </Typography>
-              
             </div>
-{/*             
+            {/*             
             <Typography variant='body1' style={{flex:'1', textAlign:'right'}} >
             Dark mode ON / OFF         
             </Typography> */}
-            
-            
-            
           </Toolbar>
         </AppBar>
       </HideOnScroll>
