@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import AppContext from "./AppContext";
-import { BrowserRouter, Redirect, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter,HashRouter, Redirect, Route, Switch, Link } from "react-router-dom";
 import LayoutRoute from "./LayoutRoute";
 import "./App.css";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -29,14 +29,14 @@ function App() {
   return (
     <ThemeProvider theme={theTheme}>
       <AppContext.Provider value={[globalState, setGlobalState]}>
-        <BrowserRouter>
+        <HashRouter>
           <Switch>
             <LayoutRoute path="/" exact={true} component={Portfolio} />
             <LayoutRoute path="/portfolio" exact={true} component={Portfolio} />
             <LayoutRoute path="/about" exact={true} component={About} />
             <LayoutRoute path="/contact" exact={true} component={Contact} />
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
       </AppContext.Provider>
     </ThemeProvider>
   );
