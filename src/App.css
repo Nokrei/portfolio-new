@@ -16,6 +16,9 @@ html, body, #root, .App {
 .projectCard__container {
   transition-duration: 250ms;
 }
+.projeftCard__container--mobile{
+  box-shadow: 1px 1px 4px;
+}
 .projectCard__container:hover {
   box-shadow: 1px 1px 4px;
 }

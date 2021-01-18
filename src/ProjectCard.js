@@ -1,11 +1,28 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Typography from "@material-ui/core/Typography";
 import LinkOutlinedIcon from "@material-ui/icons/LinkOutlined";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import useWindowDimensions from './useWindowDimensions'
 const ProjectCard = (props) => {
+
+  const { width } = useWindowDimensions();
+
+  const [projectClass, setprojectClass] = useState('projectCard__container');
+
+  useEffect(() => {
+    if (width >= 1120) {
+      setprojectClass("projectCard__container");
+    } else if (width < 1120 && width >= 770) {
+      setprojectClass("projectCard__container");
+    }
+    else if (width < 770) {
+      setprojectClass("projeftCard__container--mobile");
+    }
+  }, [width]);
+
   return (
     <div
-      className="projectCard__container"
+      className={projectClass}
       style={{
         padding: "2em",
         width: "30em",
