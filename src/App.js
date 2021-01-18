@@ -31,10 +31,10 @@ function App() {
       <AppContext.Provider value={[globalState, setGlobalState]}>
         <BrowserRouter>
           <Switch>
-            <LayoutRoute path="/"  component={Portfolio} />
-            <LayoutRoute path="/portfolio"  component={Portfolio} />
-            <LayoutRoute path="/about"  component={About} />
-            <LayoutRoute path="/contact"  component={Contact} />
+            <LayoutRoute path="/" exact={true} component={Portfolio} />
+            <LayoutRoute path="/portfolio" exact={true} component={Portfolio} />
+            <LayoutRoute path="/about" exact={true} component={About} />
+            <LayoutRoute path="/contact" exact={true} component={Contact} />
           </Switch>
         </BrowserRouter>
       </AppContext.Provider>
