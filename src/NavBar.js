@@ -58,7 +58,7 @@ const NavBar = (props) => {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar>
+        <AppBar color='secondary'>
           <Toolbar style={{ display: "flex" }}>
             <div style={{ display: "grid", justifyItems: "center" }}>
               <Typography variant="h5">Piotr Mrozowski</Typography>

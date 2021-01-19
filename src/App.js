@@ -11,7 +11,7 @@ import {
 import LayoutRoute from "./LayoutRoute";
 import "./App.css";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { blue, red, orange, green, grey } from "@material-ui/core/colors";
+import { blue, red, orange, green, grey, blueGrey } from "@material-ui/core/colors";
 import "./App.css";
 import Portfolio from "./Portfolio";
 import About from "./About";
@@ -31,8 +31,11 @@ function App() {
     palette: {
       type: globalState.mode,
       primary: {
-        main: grey[200],
+        main: grey[100],
       },
+      secondary:{
+        main: grey[100]
+      }
     },
   });
   return (

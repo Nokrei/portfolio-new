@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import AppContext from './AppContext';
+import AppContext from "./AppContext";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import useWindowDimensions from "./useWindowDimensions";
@@ -30,19 +30,21 @@ const stackArr = [
 ];
 
 const Portfolio = () => {
-  const[globalState, setGlobalState] = useContext(AppContext)
-  useEffect(()=>{
-    setGlobalState({...globalState, active:'portfolio'})
-  },[])
-  
+  const [globalState, setGlobalState] = useContext(AppContext);
+  useEffect(() => {
+    setGlobalState({ ...globalState, active: "portfolio" });
+  }, []);
+
   const { width } = useWindowDimensions();
 
   const [gridTemplate, setGridTemplate] = useState("gridWide");
 
   useEffect(() => {
-    if (width >= 1120) {
+    if (width >= 1601) {
       setGridTemplate("gridWide");
-    } else if (width < 1120 && width >= 770) {
+    }else if (width < 1601 && width >= 1120) {
+      setGridTemplate("gridWide2");
+    }else if (width < 1120 && width >= 770) {
       setGridTemplate("gridNarrow");
     } else if (width < 770) {
       setGridTemplate("gridMobile");
@@ -51,7 +53,7 @@ const Portfolio = () => {
   return (
     <Box bgcolor="primary.main" style={{ paddingBottom: "4rem" }}>
       <div style={{ margin: "8rem 0 4rem 0", textAlign: "center" }}>
-        <Typography variant="h2" style={{ marginBottom: "1rem" }}>
+        <Typography variant="h2" style={{ marginBottom: "1rem", fontWeight:'bold' }}>
           Portfolio
         </Typography>
         <Typography variant="body1" style={{ textAlign: "center" }}>
@@ -59,7 +61,6 @@ const Portfolio = () => {
           file in a corresponding GitHub repository.
         </Typography>
       </div>
-
       <div className={gridTemplate}>
         <ProjectCard
           image={bookSearch}
@@ -83,18 +84,18 @@ const Portfolio = () => {
           stack5={stackArr[4]}
         />
         <ProjectCard
-          image={Fitness}
-          title="Fitness App"
-          siteLink="https://nok-fitness.netlify.app/"
-          gitLink="https://github.com/Nokrei/fitness"
-          description="A Fitness Application. It is composed of a variety of fitness calculators such as BMI, BMR, Body Fat Percentage. The user can also calculate calories spent during exercise and meal macronutrients.
-          I made the App using ReactJS, majority of the styling is done with the use of Material UI. The responsiveness is executed via a custom hook."
+          image={Unsplash}
+          title="Image Search App"
+          siteLink="https://react-unsplash-app.netlify.app/"
+          gitLink="https://github.com/Nokrei/react-unsplash-app"
+          description="An image search web application. It uses the Unsplash API to display imagaes searched by the user. Infinite scrolling is acheved via the implementation of a custom React hook, the layout and loading-in animation by the use of the StackGrid library. Number of searches limited due to using the free variant of the Unsplash API."
           stack1={stackArr[0]}
           stack2={stackArr[1]}
           stack3={stackArr[2]}
           stack4={stackArr[3]}
           stack5={stackArr[4]}
         />
+
         <ProjectCard
           image={Diving}
           title="Diving Center Site"
@@ -111,17 +112,19 @@ const Portfolio = () => {
           stack8={stackArr[7]}
         />
         <ProjectCard
-          image={Unsplash}
-          title="Image Search App"
-          siteLink="https://react-unsplash-app.netlify.app/"
-          gitLink="https://github.com/Nokrei/react-unsplash-app"
-          description="An image search web application. It uses the Unsplash API to display imagaes searched by the user. Infinite scrolling is acheved via the implementation of a custom React hook, the layout and loading-in animation by the use of the StackGrid library. Number of searches limited due to using the free variant of the Unsplash API."
+          image={Fitness}
+          title="Fitness App"
+          siteLink="https://nok-fitness.netlify.app/"
+          gitLink="https://github.com/Nokrei/fitness"
+          description="A Fitness Application. It is composed of a variety of fitness calculators such as BMI, BMR, Body Fat Percentage. The user can also calculate calories spent during exercise and meal macronutrients.
+          I made the App using ReactJS, majority of the styling is done with the use of Material UI. The responsiveness is executed via a custom hook."
           stack1={stackArr[0]}
           stack2={stackArr[1]}
           stack3={stackArr[2]}
           stack4={stackArr[3]}
           stack5={stackArr[4]}
         />
+
         <ProjectCard
           image={Weather}
           title="Weather App"

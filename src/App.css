@@ -2,14 +2,17 @@
   --backBright: #eeeeee;
   --blue: #004d96;
 }
-html, body, #root, .App {
+html,
+body,
+#root,
+.App {
   height: 100%;
 }
 
 .projectCard__container {
   transition-duration: 250ms;
 }
-.projeftCard__container--mobile{
+.projeftCard__container--mobile {
   box-shadow: 1px 1px 4px;
 }
 .projectCard__container:hover {
@@ -30,24 +33,59 @@ html, body, #root, .App {
   background-size: 20px 2px, 0 2px, 100% 2px;
   background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
 }
-.gridWide{
+.gridWide {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 4rem;
+  width:70%;
+  margin:auto
+}
+.gridWide2{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   row-gap: 4rem;
 }
-.gridNarrow{
+.gridNarrow {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   row-gap: 4rem;
 }
-.gridMobile{
+.gridMobile {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   row-gap: 4rem;
 }
-.active{
-  color:var(--blue) !important
+.aboutWide{
+  display:grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  width:50%;
+  margin:auto
+}
+.aboutNarrow{
+  display:grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  width:50%;
+  margin:auto;
+  column-gap: 1rem;
+}
+.aboutMobile{
+  display:grid;
+  justify-items: center;
+  width:50%;
+  margin:auto;
+  row-gap: 1rem;
+  margin-bottom:1rem
+}
+.aboutMobile :nth-child(2){
+  grid-area: 1/1/1/1
+}
+
+.active {
+  color: var(--blue) !important;
 }
