@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
+import AppContext from './AppContext';
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import AppBar from "@material-ui/core/AppBar";
@@ -34,6 +35,26 @@ HideOnScroll.propTypes = {
 };
 
 const BottomNavBar = (props) => {
+  const[globalState, setGlobalState] = useContext(AppContext)
+
+  const linkArr = document.getElementsByClassName("nav-link");
+
+  useEffect(() => {
+    
+    if(globalState.active === 'portfolio'){
+      linkArr[0].classList.add("active");
+      linkArr[1].classList.remove("active")
+      linkArr[2].classList.remove("active")
+    }else if(globalState.active === 'about'){
+      linkArr[0].classList.remove("active")
+      linkArr[1].classList.add("active")
+      linkArr[2].classList.remove("active")
+    }else if(globalState.active === 'contact'){
+      linkArr[0].classList.remove("active")
+      linkArr[1].classList.remove("active")
+      linkArr[2].classList.add("active")
+    }
+  }, [globalState]);
   return (
     <React.Fragment>
       <CssBaseline />

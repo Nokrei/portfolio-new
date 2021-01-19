@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useEffect, useContext} from "react";
+import AppContext from './AppContext';
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 const Contact = () => {
+  const[globalState, setGlobalState] = useContext(AppContext)
+  useEffect(()=>{
+    setGlobalState({...globalState, active:'contact'})
+  },[])
   return (
     <Box bgcolor="primary.main">
       <div style={{ paddingBottom: "4rem", display: "grid" }}>

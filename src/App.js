@@ -1,19 +1,28 @@
 import React, { useState, useEffect, useContext } from "react";
 import AppContext from "./AppContext";
-import { BrowserRouter,HashRouter, Redirect, Route, Switch, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter,
+  Redirect,
+  Route,
+  Switch,
+  Link,
+} from "react-router-dom";
 import LayoutRoute from "./LayoutRoute";
 import "./App.css";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { blue, red, orange, green, grey } from "@material-ui/core/colors";
 import "./App.css";
-import Portfolio from './Portfolio';
-import About from './About';
-import Contact from './Contact'
+import Portfolio from "./Portfolio";
+import About from "./About";
+import Contact from "./Contact";
+
 function App() {
   const [globalState, setGlobalState] = useState({
     mode: "light",
     on: "off",
     fontSize: 18,
+    active:''
   });
   const theTheme = createMuiTheme({
     typography: {

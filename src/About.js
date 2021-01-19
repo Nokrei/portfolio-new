@@ -1,8 +1,13 @@
-import React from "react";
+import React, {useEffect, useContext} from "react";
+import AppContext from './AppContext';
 import Typography from "@material-ui/core/Typography";
 import Box from '@material-ui/core/Box';
 import Personal from "./images/personal.png";
 const About = () => {
+  const[globalState, setGlobalState] = useContext(AppContext)
+  useEffect(()=>{
+    setGlobalState({...globalState, active:'about'})
+  },[])
   return (
     <Box bgcolor='primary.main'>
       <div style={{ paddingBottom: "4rem" }}>
@@ -22,7 +27,7 @@ const About = () => {
               height: "10em",
             }}
           ></div>
-          <Typography variant="body1" style={{maxWidth:'30rem', textAlign:'justify'}}>
+          <Typography variant="body1" style={{maxWidth:'29rem', textAlign:'justify'}}>
             I am a web developer focusing mainly on the front-end, however I
             have the ability to deliver full stack applications as well. A large
             part of my professional career revolved around IT, but it is in web

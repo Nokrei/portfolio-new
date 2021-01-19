@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import AppContext from './AppContext';
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import useWindowDimensions from "./useWindowDimensions";
@@ -29,6 +30,11 @@ const stackArr = [
 ];
 
 const Portfolio = () => {
+  const[globalState, setGlobalState] = useContext(AppContext)
+  useEffect(()=>{
+    setGlobalState({...globalState, active:'portfolio'})
+  },[])
+  
   const { width } = useWindowDimensions();
 
   const [gridTemplate, setGridTemplate] = useState("gridWide");

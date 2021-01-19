@@ -24,10 +24,10 @@ const ProjectCard = (props) => {
       style={{
         padding: "2em",
         width: "30em",
-        height: "46em",
+        height: "48em",
       }}
     >
-      <div style={{ height: "42em" }}>
+      <div style={{ height: "44em" }}>
         <div
           style={{
             backgroundImage: `url(${props.image})`,
@@ -81,15 +81,15 @@ const ProjectCard = (props) => {
             {props.description}
           </Typography>
         </div>
-        <div style={{ margin: "auto" }}>
+        <div style={{ margin: "auto", marginTop:'1rem', display:'grid', gridTemplateColumns:'repeat(5,1fr)', rowGap:'0.5rem' }}>
           <img src={props.stack1} className="stackImage" />
           <img src={props.stack2} className="stackImage" />
           <img src={props.stack3} className="stackImage" />
           <img src={props.stack4} className="stackImage" />
-          <img src={props.stack5} className="stackImageBottom" />
-          <img src={props.stack6} className="stackImageBottom" />
-          <img src={props.stack7} className="stackImageBottom" />
-          <img src={props.stack8} className="stackImageBottom" />
+          <img src={props.stack5} className="stackImage" />
+          <img src={props.stack6} className="stackImage" />
+          <img src={props.stack7} className="stackImage" />
+          <img src={props.stack8} className="stackImage" />
         </div>
       </div>
     </div>
