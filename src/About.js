@@ -3,7 +3,7 @@ import AppContext from "./AppContext";
 import useWindowDimensions from "./useWindowDimensions";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import Personal from "./images/personal.png";
+import Personal from "./images/personal-min.png";
 const About = () => {
   const [globalState, setGlobalState] = useContext(AppContext);
   useEffect(() => {
