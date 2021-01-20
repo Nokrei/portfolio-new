@@ -68,13 +68,6 @@ body,
   margin:auto;
   row-gap: 1rem;
 }
-.aboutNarrow{
-  display:grid;
-  justify-items: center;
-  width:40%;
-  margin:auto;
-  row-gap: 1rem;
-}
 .aboutMobile{
   display:grid;
   justify-items: center;

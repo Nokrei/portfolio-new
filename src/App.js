@@ -1,17 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState } from "react";
 import AppContext from "./AppContext";
-import {
-  BrowserRouter,
-  HashRouter,
-  Redirect,
-  Route,
-  Switch,
-  Link,
-} from "react-router-dom";
+import { HashRouter, Switch } from "react-router-dom";
 import LayoutRoute from "./LayoutRoute";
 import "./App.css";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { blue, red, orange, green, grey, blueGrey } from "@material-ui/core/colors";
+import { grey } from "@material-ui/core/colors";
 import "./App.css";
 import Portfolio from "./Portfolio";
 import About from "./About";
@@ -22,7 +15,7 @@ function App() {
     mode: "light",
     on: "off",
     fontSize: 18,
-    active:''
+    active: "",
   });
   const theTheme = createMuiTheme({
     typography: {
@@ -33,9 +26,9 @@ function App() {
       primary: {
         main: grey[100],
       },
-      secondary:{
-        main: grey[100]
-      }
+      secondary: {
+        main: grey[100],
+      },
     },
   });
   return (
