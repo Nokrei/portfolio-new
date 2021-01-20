@@ -12,11 +12,13 @@ const About = () => {
   const { width } = useWindowDimensions();
 
   const [aboutClass, setAboutClass] = useState("aboutWide");
-
+  const [topDistance, setTopDistance] = useState('topDistanceWide')
   useEffect(() => {
     if (width >= 1601) {
+      setTopDistance('topDistanceWide')
       setAboutClass("aboutWide");
     }  else if (width < 1025) {
+      setTopDistance('topDistanceMobile')
       setAboutClass("aboutMobile");
     }
   }, [width]);
@@ -24,10 +26,10 @@ const About = () => {
   return (
     <Box bgcolor="primary.main">
       <div style={{ paddingBottom: "4rem" }}>
-        <div style={{ margin: "8rem 0 4rem 0", textAlign: "center" }}>
+        <div className={topDistance} style={{ textAlign: "center" }}>
           <Typography
             variant="h2"
-            style={{ marginBottom: "1rem", fontWeight: "bold" }}
+            style={{  fontWeight: "bold" }}
           >
             About
           </Typography>

@@ -38,21 +38,26 @@ const Portfolio = () => {
   const { width } = useWindowDimensions();
 
   const [gridTemplate, setGridTemplate] = useState("gridWide");
+  const [topDistance, setTopDistance] = useState('topDistanceWide')
 
   useEffect(() => {
     if (width >= 1601) {
       setGridTemplate("gridWide");
+      setTopDistance('topDistanceWide')
     } else if (width < 1601 && width >= 1120) {
       setGridTemplate("gridWide2");
+      setTopDistance('topDistanceWide')
     } else if (width < 1120 && width >= 770) {
       setGridTemplate("gridNarrow");
+      setTopDistance('topDistanceMobile')
     } else if (width < 770) {
       setGridTemplate("gridMobile");
+      setTopDistance('topDistanceMobile')
     }
   }, [width]);
   return (
     <Box bgcolor="primary.main" style={{ paddingBottom: "4rem" }}>
-      <div style={{ margin: "8rem 0 4rem 0", textAlign: "center" }}>
+      <div className={topDistance} style={{ textAlign: "center" }}>
         <Typography
           variant="h2"
           style={{ marginBottom: "1rem", fontWeight: "bold" }}

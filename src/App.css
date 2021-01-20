@@ -66,15 +66,22 @@ body,
   justify-items: center;
   width:40%;
   margin:auto;
-  row-gap: 1rem;
+  row-gap: 2rem;
 }
+
 .aboutMobile{
   display:grid;
   justify-items: center;
   width:80%;
   margin:auto;
-  row-gap: 1rem;
+  row-gap: 2rem;
   margin-bottom:1rem
+}
+.topDistanceWide{
+  margin: 8rem 0 2rem 0
+}
+.topDistanceMobile{
+  margin: 2rem 0 2rem 0
 }
 .active {
   color: var(--blue) !important;

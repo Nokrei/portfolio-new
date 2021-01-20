@@ -1,20 +1,33 @@
-import React, {useEffect, useContext} from "react";
-import AppContext from './AppContext';
+import React, {useState, useEffect, useContext } from "react";
+import AppContext from "./AppContext";
+import useWindowDimensions from "./useWindowDimensions";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 const Contact = () => {
-  const[globalState, setGlobalState] = useContext(AppContext)
-  useEffect(()=>{
-    setGlobalState({...globalState, active:'contact'})
-  },[])
+  const [globalState, setGlobalState] = useContext(AppContext);
+  useEffect(() => {
+    setGlobalState({ ...globalState, active: "contact" });
+  }, []);
+  const { width } = useWindowDimensions();
+  const [topDistance, setTopDistance] = useState("topDistanceWide");
+  useEffect(() => {
+    if (width >= 1601) {
+      setTopDistance("topDistanceWide");
+    } else if (width < 1025) {
+      setTopDistance("topDistanceMobile");
+    }
+  }, [width]);
   return (
     <Box bgcolor="primary.main">
       <div style={{ paddingBottom: "4rem", display: "grid" }}>
-        <div style={{ margin: "8rem 0 4rem 0", textAlign: "center" }}>
-          <Typography variant="h2" style={{ marginBottom: "1rem", fontWeight:'bold' }}>
+        <div className={topDistance} style={{ textAlign: "center" }}>
+          <Typography
+            variant="h2"
+            style={{ marginBottom: "1rem", fontWeight: "bold" }}
+          >
             Contact
           </Typography>
           <Typography variant="h6">
