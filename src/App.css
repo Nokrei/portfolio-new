@@ -62,22 +62,22 @@ body,
 .aboutWide{
   display:grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr;
-  width:50%;
+  grid-template-columns: 2fr 1fr;
+  width:30%;
   margin:auto
 }
 .aboutNarrow{
   display:grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr;
-  width:50%;
+  grid-template-columns: 2fr 1fr;
+  width:30%;
   margin:auto;
   column-gap: 1rem;
 }
 .aboutMobile{
   display:grid;
   justify-items: center;
-  width:50%;
+  width:80%;
   margin:auto;
   row-gap: 1rem;
   margin-bottom:1rem
@@ -85,7 +85,6 @@ body,
 .aboutMobile :nth-child(2){
   grid-area: 1/1/1/1
 }
-
 .active {
   color: var(--blue) !important;
 }

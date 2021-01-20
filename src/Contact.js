@@ -14,10 +14,10 @@ const Contact = () => {
     <Box bgcolor="primary.main">
       <div style={{ paddingBottom: "4rem", display: "grid" }}>
         <div style={{ margin: "8rem 0 4rem 0", textAlign: "center" }}>
-          <Typography variant="h2" style={{ marginBottom: "1rem" }}>
+          <Typography variant="h2" style={{ marginBottom: "1rem", fontWeight:'bold' }}>
             Contact
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body1">
             Feel free to contact me via the following:
           </Typography>
         </div>
