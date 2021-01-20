@@ -16,9 +16,7 @@ const About = () => {
   useEffect(() => {
     if (width >= 1601) {
       setAboutClass("aboutWide");
-    } else if (width < 1601 && width >= 1025) {
-      setAboutClass("aboutNarrow");
-    } else if (width < 1025) {
+    }  else if (width < 1025) {
       setAboutClass("aboutMobile");
     }
   }, [width]);
@@ -34,14 +32,34 @@ const About = () => {
             About
           </Typography>
         </div>
+
         <div className={aboutClass}>
-          <Typography variant="body1" style={{ textAlign: "justify" }}>
+        <div
+          // style={{
+          //   backgroundImage: `url(${Personal})`,
+          //   backgroundPosition: "center center",
+          //   backgroundRepeat: "no-repeat",
+          //   backgroundSize: "cover",
+          //   width:'20vh',
+          //   height:'10vw'
+          // }}
+          >
+            <img
+              src={Personal}
+              style={{ width: "10rem", height: "10rem", borderRadius: "100%" }}
+            />
+          </div>
+          <Typography variant="h6" style={{ textAlign: "justify" }}>
             I am a web developer focusing mainly on the front-end, however I
             have the ability to deliver full stack applications as well. A large
             part of my professional career revolved around IT, but it is in web
-            development where I found my true passion and calling. I am open to
-            both full time positions and freelance opportunities ? Feel free to
-            contact me on &nbsp;
+            development where I found my true passion and calling.<br/><br/> My tech
+            stack is HTML5, CSS3, JavaScript ES6+, ReactJS, NodeJS (Express),
+            MongoDB(Mongoose). I have experience using Version Control Systems
+            (GIT) and Package Managers (NPM). In my projects I practice the
+            principles of Responsive Web Design, Mobile First Design and I
+            follow the BEM methodology.<br/><br/> I am open to both full time positions and
+            freelance opportunities. <br/><br/>If Interested - contact me on &nbsp;
             <a
               className="animateUnderline"
               href="https://www.linkedin.com/in/piotr-mrozowski-26ab03198/"
@@ -59,26 +77,16 @@ const About = () => {
             >
               GitHub
             </a>
-            , or{' '}
+            , or{" "}
             <a
               className="animateUnderline"
               href="mailto:pmrozowski87@gmail.com"
             >
               email me
-            </a>.{" "}
+            </a>
+            .{" "}
           </Typography>
-          <div
-          // style={{
-          //   backgroundImage: `url(${Personal})`,
-          //   backgroundPosition: "center center",
-          //   backgroundRepeat: "no-repeat",
-          //   backgroundSize: "cover",
-          //   width:'20vh',
-          //   height:'10vw'
-          // }}
-          >
-            <img src={Personal} style={{ width: "9rem", height: "10rem" }} />
-          </div>
+          
         </div>
       </div>
     </Box>

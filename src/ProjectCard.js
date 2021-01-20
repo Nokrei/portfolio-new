@@ -23,8 +23,8 @@ const ProjectCard = (props) => {
       className={projectClass}
       style={{
         padding: "2em",
-        width: "30em",
-        height: "48em",
+        maxWidth: "30em",
+        minHeight: "48em",
       }}
     >
       <div style={{ height: "44em" }}>
@@ -55,7 +55,7 @@ const ProjectCard = (props) => {
               rel="noreferrer noopener"
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <Typography variant="body2" className="animateUnderline">
+              <Typography variant="body1" className="animateUnderline">
                 {props.siteLink}
               </Typography>
             </a>
@@ -68,7 +68,7 @@ const ProjectCard = (props) => {
               rel="noreferrer noopener"
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <Typography variant="body2" className="animateUnderline">
+              <Typography variant="body1" className="animateUnderline">
                 {props.gitLink}
               </Typography>
             </a>

@@ -58,7 +58,9 @@ export default function ToTop(props) {
           size="small"
           aria-label="scroll back to top"
           style={{
-            backgroundColor: "var(--accentOrange)",
+            color:"#f5f5f5",
+            backgroundColor: "#004d96",
+            bottom:'4em'
           }}
         >
           <KeyboardArrowUpIcon />

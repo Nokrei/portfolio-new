@@ -42,9 +42,9 @@ const Portfolio = () => {
   useEffect(() => {
     if (width >= 1601) {
       setGridTemplate("gridWide");
-    }else if (width < 1601 && width >= 1120) {
+    } else if (width < 1601 && width >= 1120) {
       setGridTemplate("gridWide2");
-    }else if (width < 1120 && width >= 770) {
+    } else if (width < 1120 && width >= 770) {
       setGridTemplate("gridNarrow");
     } else if (width < 770) {
       setGridTemplate("gridMobile");
@@ -53,10 +53,13 @@ const Portfolio = () => {
   return (
     <Box bgcolor="primary.main" style={{ paddingBottom: "4rem" }}>
       <div style={{ margin: "8rem 0 4rem 0", textAlign: "center" }}>
-        <Typography variant="h2" style={{ marginBottom: "1rem", fontWeight:'bold' }}>
+        <Typography
+          variant="h2"
+          style={{ marginBottom: "1rem", fontWeight: "bold" }}
+        >
           Portfolio
         </Typography>
-        <Typography variant="body1" style={{ textAlign: "center" }}>
+        <Typography variant="h6" style={{ textAlign: "center" }}>
           For more detailed descriptions of the projects, please view the ReadMe
           file in a corresponding GitHub repository.
         </Typography>
@@ -101,7 +104,7 @@ const Portfolio = () => {
           title="Diving Center Site"
           siteLink="https://diving-project-front.herokuapp.com/"
           gitLink="https://github.com/Nokrei/dive-center-front"
-          description="The final team project for my full-stack coding bootcamp."
+          description="The final team project for my full-stack coding bootcamp. It is a diving center website, connected to multiple databases - courses, users, blog posts. For the front-end it uses ReactJS, some bootstrap, material UI, and plain CSS. Back-end is done via NodeJS(Express). It uses Mongoose to connect to the MongoDB database. Users can register, log in and update their profiles. We had little time to complete the project - hence many features are missing and the styling is not complete. Some features like the blog and ability to add new posts (by admin user) have been added by me after the project had been handed in. Note the site takes a while to initially load as Heroku(hosting) 'puts it to sleep' when not being frequently accessed."
           stack1={stackArr[0]}
           stack2={stackArr[1]}
           stack3={stackArr[2]}

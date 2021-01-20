@@ -17,8 +17,8 @@ const Contact = () => {
           <Typography variant="h2" style={{ marginBottom: "1rem", fontWeight:'bold' }}>
             Contact
           </Typography>
-          <Typography variant="body1">
-            Feel free to contact me via the following:
+          <Typography variant="h6">
+            Interested? Contact me via the following:
           </Typography>
         </div>
         <div
