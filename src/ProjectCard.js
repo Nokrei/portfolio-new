@@ -82,14 +82,14 @@ const ProjectCard = (props) => {
           </Typography>
         </div>
         <div style={{ margin: "auto", marginTop:'1rem', display:'grid', gridTemplateColumns:'repeat(5,1fr)', rowGap:'0.5rem' }}>
-          <img src={props.stack1} className="stackImage" />
-          <img src={props.stack2} className="stackImage" />
-          <img src={props.stack3} className="stackImage" />
-          <img src={props.stack4} className="stackImage" />
-          <img src={props.stack5} className="stackImage" />
-          <img src={props.stack6} className="stackImage" />
-          <img src={props.stack7} className="stackImage" />
-          <img src={props.stack8} className="stackImage" />
+          <img src={props.stack1} className="stackImage" alt='html'/>
+          <img src={props.stack2} className="stackImage" alt='css'/>
+          <img src={props.stack3} className="stackImage" alt='js'/>
+          <img src={props.stack4} className="stackImage" alt='react'/>
+          <img src={props.stack5} className="stackImage" alt='npm'/>
+          <img src={props.stack6} className="stackImage" alt='express'/>
+          <img src={props.stack7} className="stackImage" alt='mongo'/>
+          <img src={props.stack8} className="stackImage" alt='node'/>
         </div>
       </div>
     </div>

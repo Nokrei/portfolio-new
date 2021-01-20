@@ -35,17 +35,10 @@ const About = () => {
 
         <div className={aboutClass}>
         <div
-          // style={{
-          //   backgroundImage: `url(${Personal})`,
-          //   backgroundPosition: "center center",
-          //   backgroundRepeat: "no-repeat",
-          //   backgroundSize: "cover",
-          //   width:'20vh',
-          //   height:'10vw'
-          // }}
+    
           >
             <img
-              src={Personal}
+              src={Personal} alt='avatar'
               style={{ width: "10rem", height: "10rem", borderRadius: "100%" }}
             />
           </div>
