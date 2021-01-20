@@ -90,6 +90,7 @@ const Portfolio = () => {
           stack3={stackArr[2]}
           stack4={stackArr[3]}
           stack5={stackArr[4]}
+          
         />
         <ProjectCard
           image={Unsplash}
