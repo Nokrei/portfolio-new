@@ -78,7 +78,7 @@ const Portfolio = () => {
           title="Book Search App"
           siteLink="https://pm-goodreads-app.netlify.app/"
           gitLink="https://github.com/Nokrei/good-reads-app"
-          description="A Book search application.The user can search by title, author or ISBN. 
+          description="A Book search application. The user can search by title, author or ISBN. 
           They can then click on the author's name and go to the writer's details page, where 
           they can also see all the author's books.
           The Goodreads API powering the search gave me some problems - 
@@ -99,7 +99,7 @@ const Portfolio = () => {
           title="Image Search App"
           siteLink="https://react-unsplash-app.netlify.app/"
           gitLink="https://github.com/Nokrei/react-unsplash-app"
-          description="An image search web application. It uses the Unsplash API to display imagaes searched by the user. Infinite scrolling is acheved via the implementation of a custom React hook, the layout and loading-in animation by the use of the StackGrid library. Number of searches limited due to using the free variant of the Unsplash API."
+          description="An image search web application. It uses the Unsplash API to display images searched by the user. Infinite scrolling is achieved via the implementation of a custom React hook, the layout and loading-in animation by the use of the StackGrid library. Number of searches limited due to using the free variant of the Unsplash API."
           stack1={stackArr[0]}
           stack2={stackArr[1]}
           stack3={stackArr[2]}
@@ -112,7 +112,7 @@ const Portfolio = () => {
           title="Diving Center Site"
           siteLink="https://diving-project-front.herokuapp.com/"
           gitLink="https://github.com/Nokrei/dive-center-front"
-          description="The final team project for my full-stack coding bootcamp. It is a diving center website, connected to multiple databases - courses, users, blog posts. For the front-end it uses ReactJS, some bootstrap, material UI, and plain CSS. Back-end is done via NodeJS(Express). It uses Mongoose to connect to the MongoDB database. Users can register, log in and update their profiles. We had little time to complete the project - hence many features are missing and the styling is not complete. Some features like the blog and ability to add new posts (by admin user) have been added by me after the project had been handed in. Note the site takes a while to initially load as Heroku(hosting) 'puts it to sleep' when not being frequently accessed."
+          description="The final team project for my full-stack coding bootcamp. It is a diving center website, connected to multiple databases - courses, users, blog posts. For the front-end it uses ReactJS, some bootstrap, material UI, and plain CSS. Back-end is done via NodeJS(Express). It uses Mongoose to connect to the MongoDB database. Users can register, log in and update their profiles. We had little time to complete the project - hence many features are missing, and the styling is not complete. Some features like the blog and ability to add new posts (by admin user) have been added by me after the project had been handed in. Note the site takes a while to initially load as Heroku(hosting) 'puts it to sleep' when not being frequently accessed."
           stack1={stackArr[0]}
           stack2={stackArr[1]}
           stack3={stackArr[2]}
