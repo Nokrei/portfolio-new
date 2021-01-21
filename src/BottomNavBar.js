@@ -84,6 +84,7 @@ const BottomNavBar = (props) => {
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr 1fr",
                 columnGap: "5rem",
+                justifyItems:'center'
               }}
             >
               {props.links.map((entry, index) => (
