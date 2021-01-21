@@ -3,7 +3,7 @@ import AppContext from "./AppContext";
 import useWindowDimensions from "./useWindowDimensions";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import Personal from "./images/personal-min.png";
+import Personal from "./images/personal-circle.png";
 const About = () => {
   const [globalState, setGlobalState] = useContext(AppContext);
   useEffect(() => {
@@ -31,7 +31,7 @@ const About = () => {
             variant="h2"
             style={{  fontWeight: "bold" }}
           >
-            About
+            About me
           </Typography>
         </div>
 
@@ -41,7 +41,7 @@ const About = () => {
           >
             <img
               src={Personal} alt='avatar'
-              style={{ width: "10rem", height: "10rem", borderRadius: "100%" }}
+              style={{ width: "10rem", height: "10rem"}}
             />
           </div>
           <Typography variant="h6" style={{ textAlign: "justify" }}>

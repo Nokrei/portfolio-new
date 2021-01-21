@@ -68,7 +68,7 @@ const Portfolio = () => {
           Portfolio
         </Typography>
         <Typography variant="h6" style={{ textAlign: "center" }}>
-          For more detailed descriptions of the projects, please view the ReadMe
+          For more details about the projects, please view the ReadMe
           file in a corresponding GitHub repository.
         </Typography>
       </div>
