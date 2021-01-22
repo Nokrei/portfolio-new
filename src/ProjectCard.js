@@ -41,6 +41,7 @@ const ProjectCard = (props) => {
           style={{
             display: "grid",
             padding: "0 0 0.7rem 0",
+            minHeight:'5rem'
           }}
         >
           <div style={{ display: "flex", padding: " 0 0 0.5rem 0" }}>
