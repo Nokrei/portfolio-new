@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import AppContext from "./AppContext";
-import useWindowDimensions from "./useWindowDimensions";
+
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Personal from "./images/personal-circle.png";
@@ -9,19 +9,7 @@ const About = () => {
   useEffect(() => {
     setGlobalState({ ...globalState, active: "about" });
   }, []);
-  const { width } = useWindowDimensions();
-
-  const [aboutClass, setAboutClass] = useState("aboutWide");
-  const [topDistance, setTopDistance] = useState("topDistanceWide");
-  useEffect(() => {
-    if (width >= 1601) {
-      setTopDistance("topDistanceWide");
-      setAboutClass("aboutWide");
-    } else if (width < 1025) {
-      setTopDistance("topDistanceMobile");
-      setAboutClass("aboutMobile");
-    }
-  }, [width]);
+  
 
   return (
     <Box bgcolor="primary.main">

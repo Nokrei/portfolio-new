@@ -1,6 +1,5 @@
-import React, {useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import AppContext from "./AppContext";
-import useWindowDimensions from "./useWindowDimensions";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
@@ -11,15 +10,7 @@ const Contact = () => {
   useEffect(() => {
     setGlobalState({ ...globalState, active: "contact" });
   }, []);
-  const { width } = useWindowDimensions();
-  const [topDistance, setTopDistance] = useState("topDistanceWide");
-  useEffect(() => {
-    if (width >= 1601) {
-      setTopDistance("topDistanceWide");
-    } else if (width < 1025) {
-      setTopDistance("topDistanceMobile");
-    }
-  }, [width]);
+ 
   return (
     <Box bgcolor="primary.main">
       <div style={{ paddingBottom: "4rem", display: "grid" }}>

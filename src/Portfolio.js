@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import AppContext from "./AppContext";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import useWindowDimensions from "./useWindowDimensions";
 import ProjectCard from "./ProjectCard";
 import bookSearch from "./images/bookSearch-min.png";
 import Fitness from "./images/fitness.png";
@@ -36,27 +35,6 @@ const Portfolio = () => {
   useEffect(() => {
     setGlobalState({ ...globalState, active: "portfolio" });
   }, []);
-
-  const { width } = useWindowDimensions();
-
-  const [gridTemplate, setGridTemplate] = useState("gridWide2");
-  const [topDistance, setTopDistance] = useState("topDistanceWide");
-
-  useEffect(() => {
-    if (width >= 1601) {
-      
-      setTopDistance("topDistanceWide");
-    } else if (width < 1601 && width >= 1120) {
-      
-      setTopDistance("topDistanceWide");
-    } else if (width < 1120 && width >= 770) {
-      
-      setTopDistance("topDistanceMobile");
-    } else if (width < 770) {
-      
-      setTopDistance("topDistanceMobile");
-    }
-  }, [width]);
 
   return (
     <Box bgcolor="primary.main" style={{ paddingBottom: "4rem" }}>
