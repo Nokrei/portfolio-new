@@ -1,6 +1,5 @@
 import React, { useEffect, useContext } from "react";
 import AppContext from "./AppContext";
-
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Personal from "./images/personal-circle.png";

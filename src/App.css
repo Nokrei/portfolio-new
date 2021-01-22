@@ -8,15 +8,11 @@ body,
 .App {
   height: 100%;
 }
-
 .projectCard__container {
   transition-duration: 250ms;
   padding: 2em;
   max-width: 30em;
   min-height: 38rem;
-}
-.projeftCard__container--mobile {
-  box-shadow: 1px 1px 4px;
 }
 .projectCard__container:hover {
   box-shadow: 1px 1px 4px;
@@ -44,26 +40,7 @@ body,
   width: 70%;
   margin: auto;
 }
-.gridWide2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  row-gap: 4rem;
-  width: 90%;
-  margin: auto;
-}
-.gridNarrow {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  row-gap: 4rem;
-}
-.gridMobile {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  row-gap: 4rem;
-}
+
 .about__grid {
   display: grid;
   justify-items: center;
@@ -72,24 +49,11 @@ body,
   row-gap: 2rem;
 }
 
-.aboutMobile {
-  display: grid;
-  justify-items: center;
-  width: 80%;
-  margin: auto;
-  row-gap: 2rem;
-  margin-bottom: 1rem;
-}
 .top__distance {
   margin: 8rem 0 2rem 0;
   text-align: center;
 }
-.topDistanceWide {
-  margin: 8rem 0 2rem 0;
-}
-.topDistanceMobile {
-  margin: 2rem 0 2rem 0;
-}
+
 .active {
   color: var(--blue) !important;
 }
@@ -126,7 +90,7 @@ body,
     justify-items: center;
     row-gap: 4rem;
     width: 90%;
-    margin:auto
+    margin: auto;
   }
   .about__grid {
     display: grid;
@@ -153,7 +117,7 @@ body,
     justify-items: center;
     row-gap: 4rem;
     width: 100%;
-    margin: none
+    margin: none;
   }
   .about__grid {
     display: grid;

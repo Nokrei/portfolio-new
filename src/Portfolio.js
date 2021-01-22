@@ -38,7 +38,7 @@ const Portfolio = () => {
 
   return (
     <Box bgcolor="primary.main" style={{ paddingBottom: "4rem" }}>
-      <div className='top__distance' >
+      <div className="top__distance">
         <Typography
           variant="h2"
           style={{ marginBottom: "1rem", fontWeight: "bold" }}
@@ -50,7 +50,7 @@ const Portfolio = () => {
           corresponding GitHub repository.
         </Typography>
       </div>
-      <div className='portfolio__grid'>
+      <div className="portfolio__grid">
         <ProjectCard
           image={bookSearch}
           title="Book Search App"
