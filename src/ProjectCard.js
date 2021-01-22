@@ -20,14 +20,10 @@ const ProjectCard = (props) => {
 
   return (
     <div
-      className={projectClass}
-      style={{
-        padding: "2em",
-        maxWidth: "30em",
-        minHeight: "48em",
-      }}
+      className='projectCard__container'
+    
     >
-      <div style={{ height: "44em" }}>
+      <div style={{ height: "36rem" }}>
         <div
           style={{
             backgroundImage: `url(${props.image})`,

@@ -13,7 +13,7 @@ body,
   transition-duration: 250ms;
   padding: 2em;
   max-width: 30em;
-  min-height: 48em;
+  min-height: 38rem;
 }
 .projeftCard__container--mobile {
   box-shadow: 1px 1px 4px;
@@ -113,7 +113,7 @@ body,
     transition-duration: 250ms;
     padding: 2em;
     max-width: 30em;
-    min-height: 48em;
+    min-height: 32rem;
   }
   .top__distance {
     margin: 8rem 0 2rem 0;
@@ -140,7 +140,7 @@ body,
     transition-duration: 250ms;
     padding: 2em;
     max-width: 30em;
-    min-height: 48em;
+    min-height: 32rem;
   }
   .top__distance {
     margin: 2rem 0 2rem 0;
