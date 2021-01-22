@@ -33,7 +33,7 @@ body,
   background-size: 20px 2px, 0 2px, 100% 2px;
   background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
 }
-.gridWide {
+.portfolio__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
@@ -61,7 +61,7 @@ body,
   justify-items: center;
   row-gap: 4rem;
 }
-.aboutWide{
+.about__grid{
   display:grid;
   justify-items: center;
   width:40%;
@@ -77,6 +77,10 @@ body,
   row-gap: 2rem;
   margin-bottom:1rem
 }
+.top__distance{
+  margin: 8rem 0 2rem 0;
+  text-align: center;
+}
 .topDistanceWide{
   margin: 8rem 0 2rem 0
 }
@@ -85,4 +89,62 @@ body,
 }
 .active {
   color: var(--blue) !important;
+}
+@media only screen and (min-width: 1120px) and (max-width: 1600px)  {
+  .portfolio__grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 4rem;
+    width:90%;
+    margin:auto
+  };
+  .about__grid{
+    display:grid;
+    justify-items: center;
+    width:40%;
+    margin:auto;
+    row-gap: 2rem;
+  }
+  .top__distance{
+    margin: 8rem 0 2rem 0
+  }
+}
+@media only screen and (min-width: 770px) and (max-width: 1119px) {
+  .portfolio__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 4rem;
+  }
+  .about__grid{
+    display:grid;
+    justify-items: center;
+    width:80%;
+    margin:auto;
+    row-gap: 2rem;
+    margin-bottom:1rem
+  }
+  .top__distance{
+    margin: 2rem 0 2rem 0
+  }
+}
+@media only screen and (max-width: 769px) {
+  .portfolio__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 4rem;
+  }
+  .about__grid{
+    display:grid;
+    justify-items: center;
+    width:80%;
+    margin:auto;
+    row-gap: 2rem;
+    margin-bottom:1rem
+  }
+  .top__distance{
+    margin: 2rem 0 2rem 0
+  }
 }

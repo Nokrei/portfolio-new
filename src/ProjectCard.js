@@ -81,7 +81,15 @@ const ProjectCard = (props) => {
             {props.description}
           </Typography>
         </div>
-        <div style={{ margin: "auto", marginTop:'1rem', display:'grid', gridTemplateColumns:'repeat(5,1fr)', rowGap:'0.5rem' }}>
+        <div
+          style={{
+            margin: "auto",
+            marginTop: "1rem",
+            display: "grid",
+            gridTemplateColumns: "repeat(5,1fr)",
+            rowGap: "0.5rem",
+          }}
+        >
           <img src={props.stack1} className="stackImage" />
           <img src={props.stack2} className="stackImage" />
           <img src={props.stack3} className="stackImage" />

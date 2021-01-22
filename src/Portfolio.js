@@ -44,23 +44,23 @@ const Portfolio = () => {
 
   useEffect(() => {
     if (width >= 1601) {
-      setGridTemplate("gridWide");
+      
       setTopDistance("topDistanceWide");
     } else if (width < 1601 && width >= 1120) {
-      setGridTemplate("gridWide2");
+      
       setTopDistance("topDistanceWide");
     } else if (width < 1120 && width >= 770) {
-      setGridTemplate("gridNarrow");
+      
       setTopDistance("topDistanceMobile");
     } else if (width < 770) {
-      setGridTemplate("gridMobile");
+      
       setTopDistance("topDistanceMobile");
     }
   }, [width]);
 
   return (
     <Box bgcolor="primary.main" style={{ paddingBottom: "4rem" }}>
-      <div className={topDistance} style={{ textAlign: "center" }}>
+      <div className='top__distance' >
         <Typography
           variant="h2"
           style={{ marginBottom: "1rem", fontWeight: "bold" }}
@@ -68,11 +68,11 @@ const Portfolio = () => {
           Portfolio
         </Typography>
         <Typography variant="h6" style={{ textAlign: "center" }}>
-          For more details about the projects, please view the ReadMe
-          file in a corresponding GitHub repository.
+          For more details about the projects, please view the ReadMe file in a
+          corresponding GitHub repository.
         </Typography>
       </div>
-      <div className={gridTemplate}>
+      <div className='portfolio__grid'>
         <ProjectCard
           image={bookSearch}
           title="Book Search App"

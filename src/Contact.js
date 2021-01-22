@@ -23,7 +23,7 @@ const Contact = () => {
   return (
     <Box bgcolor="primary.main">
       <div style={{ paddingBottom: "4rem", display: "grid" }}>
-        <div className={topDistance} style={{ textAlign: "center" }}>
+        <div className={'top__distance'} style={{ textAlign: "center" }}>
           <Typography
             variant="h2"
             style={{ marginBottom: "1rem", fontWeight: "bold" }}
