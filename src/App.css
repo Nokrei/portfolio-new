@@ -109,6 +109,12 @@ body,
     margin: auto;
     row-gap: 2rem;
   }
+  .projectCard__container {
+    transition-duration: 250ms;
+    padding: 2em;
+    max-width: 30em;
+    min-height: 48em;
+  }
   .top__distance {
     margin: 8rem 0 2rem 0;
   }
@@ -120,6 +126,7 @@ body,
     justify-items: center;
     row-gap: 4rem;
     width: 90%;
+    margin:auto
   }
   .about__grid {
     display: grid;
@@ -128,6 +135,12 @@ body,
     margin: auto;
     row-gap: 2rem;
     margin-bottom: 1rem;
+  }
+  .projectCard__container {
+    transition-duration: 250ms;
+    padding: 2em;
+    max-width: 30em;
+    min-height: 48em;
   }
   .top__distance {
     margin: 2rem 0 2rem 0;
