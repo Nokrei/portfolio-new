@@ -51,27 +51,7 @@ const Portfolio = () => {
         </Typography>
       </div>
       <div className="portfolio__grid">
-        <ProjectCard
-          image={bookSearch}
-          title="Book Search App"
-          siteLink="https://pm-goodreads-app.netlify.app/"
-          gitLink="https://github.com/Nokrei/good-reads-app"
-          description="A Book search application. The user can search by title, author or ISBN. 
-          They can then click on the author's name and go to the writer's details page, where 
-          they can also see all the author's books.
-          The Goodreads API powering the search gave me some problems - 
-          the response is in XML so I had to parse it to JSON, they do not include the CORS header 
-          in ANY of their API calls, so I had to route the request through cors-anywhere.herokuapp, 
-          and it has a rate limit of one request per second, that's why I didn't make the results 
-          load with every key stroke, also I have spent about half a day in total resetting the 
-          API key, and waiting for it to let me use it again - been getting the 429 error a lot 
-          while testing calls."
-          stack1={stackArr[0]}
-          stack2={stackArr[1]}
-          stack3={stackArr[2]}
-          stack4={stackArr[3]}
-          stack5={stackArr[4]}
-        />
+    
         <ProjectCard
           image={Unsplash}
           title="Image Search App"
