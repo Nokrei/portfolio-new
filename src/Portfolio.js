@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import ProjectCard from "./ProjectCard";
 import bookSearch from "./images/bookSearch-min.png";
+import Asylum from "./images/Asylum-min.png";
 import Fitness from "./images/fitness.png";
 import Unsplash from "./images/unsplash.png";
 import Diving from "./images/diving-project-min.png";
@@ -51,7 +52,18 @@ const Portfolio = () => {
         </Typography>
       </div>
       <div className="portfolio__grid">
-    
+        <ProjectCard
+          image={Asylum}
+          title="Gaming Community Website"
+          siteLink="https://www.asylum669.com"
+          gitLink="https://github.com/Nokrei/asylum-community"
+          description="This is my first commission project – a website for a Gaming Community. Both the design and development were done fully by me. The requirements for the app were that it was supposed to be attention grabbing, have a decent number of animations and perform best on PC screens. Most of the animations are done with the use of CSS (SASS) keyframes. I am importing React Spring, but after playing around with it I decided to use it only for simple fade-in and out transitions. The 3d animation of the eye in approve screen is done with the help of react-use-rect to get the position and dimensions of the element, then Rotate X and rotate Y are being set accordingly to cursor movement, with a fixed perspective of 100px. The eye grows and shrinks depending on mouse wheel movement, and after the element reaches a desired size (scale) - circle animations are triggered. The opacity of on the main screen is controlled with scroll, the sliders are made with infinite-react-carousel (it took a while to customize it), the ‘movement’ of staff cards in and out of the viewport is achieved with the help of react-intersection-observer – value of translate X is being set to 0 when component enters the viewport, with a transition duration of 1s. The mobile version was not a primary focus but has all the functionality – except the eye animation in approve screen. The mobile hamburger menu is made with the use of react-burger-menu."
+          stack1={stackArr[0]}
+          stack2={stackArr[1]}
+          stack3={stackArr[2]}
+          stack4={stackArr[3]}
+          stack5={stackArr[4]}
+        />
         <ProjectCard
           image={Unsplash}
           title="Image Search App"
